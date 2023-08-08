@@ -1,0 +1,36 @@
+/*Write a program that has only one button in the frame, clicking on 
+the button cycles through the colors: red->green->blue and so on. 
+One color changes per click.(use getBackGround() method to get the 
+current color)*/
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class p8 implements ActionListener{
+JFrame f1;
+Button b1;
+p8(){
+f1 = new JFrame("Welcome to P8");
+b1 = new Button("Change Background");
+b1.setBackground(Color.red);
+b1.addActionListener(this);
+f1.setLayout(new FlowLayout());
+f1.setSize(500, 500);
+f1.add(b1);
+f1.setVisible(true);
+}
+public void actionPerformed(ActionEvent m){
+if(b1.getBackground() == Color.red){
+b1.setBackground(Color.green);
+}
+else if(b1.getBackground() == Color.green){
+b1.setBackground(Color.blue);
+}
+else{
+b1.setBackground(Color.red);
+}
+}
+public static void main(String[] args){
+p8 obj = new p8();
+}
+}
