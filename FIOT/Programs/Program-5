@@ -1,0 +1,10 @@
+'' 'Write a python program to demonstrate the use of Arithmetic operators by getting two numbers from the user.' '' 
+A = int (input ("Enter A : ")) 
+B = int (input ("Enter B : ")) 
+print("Addition is ", A+B)
+print("Subtraction is ", A-B)
+print("Multiplication is ", A*B)
+print("Division is ", A/B)
+print("Modulus is ", A%B)
+print("Floor Divison is ", A//B)
+print("Exponent is ", A**B)
