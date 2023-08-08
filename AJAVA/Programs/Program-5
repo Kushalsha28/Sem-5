@@ -1,0 +1,35 @@
+/*Develop an applet that display the position of the mouse at the upper 
+left corner of the applet when it is dragged or moved. Draw a 10x10 
+pixel rectangle filed with black at the current mouse position.*/
+
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class p5 extends Applet implements MouseMotionListner{
+
+    int x,y;
+    public void init() {
+        setSize(500,500);
+        addMouseMotionListener(this);
+    }
+    public void paint(Graphics g) {
+        g.drawString("x="+ x+ "|y="+y,20,20);
+        g.fillRect(x,y,10,10);
+           }
+           public void mouseDragged(MouseEvent m)
+{
+    x=m.getX();
+    y=m.getY();
+    repaint();
+}
+ public void mouseMoved(MouseEvent m)
+{
+    x=m.getX();
+    y=m.getY();
+    repaint();
+}
+}
+/*
+<applet code="p5" width="0" height="0"> </applet>
+ */
