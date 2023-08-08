@@ -1,0 +1,17 @@
+''' Write a python program to print basic details of students. '''
+
+studentName = input("Name : ")
+studentGender = input("Gender : ")
+studentDepartment = input("Department : ")
+studentNationality = input("Nationality : ")
+studentCity = input("City : ")
+studentSemester = input("Semester : ")
+studentEnrollment = input("Enrollment : ")
+
+print("\nName is " + studentName)
+print("Gender is " + studentGender)
+print("Department is " + studentDepartment)
+print("Nationality is " + studentNationality)
+print("City is " + studentCity)
+print("Semester is " + studentSemester)
+print("Enrollment is " + studentEnrollment)
