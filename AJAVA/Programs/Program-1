@@ -1,0 +1,20 @@
+/* Write a Basic java applet program */
+import java.applet.*;
+import java.awt.*;
+
+public class Practical1 extends Applet
+{
+	public void init() {
+		setBackground(Color.white);
+		setForeground(Color.green);
+	
+	}
+	public void paint(Graphics k) {
+		k.drawString("Hello World",100,100);
+	}
+}
+
+/*
+	<applet code="Practical1" width="400" height="400">
+	</applet>
+*/
