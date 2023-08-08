@@ -1,0 +1,47 @@
+/*: Built an applet that displays a horizontal rectangle in its center. Let
+the rectangle fill with color from left to right.*/
+
+import java.applet.*;
+import java.awt.*;
+public class p4 extends Applet
+{
+public void paint(Graphics g)
+{
+
+g.drawRect(200,200,400,200);
+g.drawRect(600,250,40,100);
+g.setColor(Color.red);
+g.fillRect(201,201,399,199);
+g.fillRect(600,251,40,99);
+
+g.setColor(Color.green);
+for(int i=201; i<600; i++)
+{
+try
+{
+Thread.sleep(30);
+g.fillRect(i,201,1,199);
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+for(int m=600; m<639; m++)
+{
+try
+{
+Thread.sleep(30);
+g.fillRect(m,251,1,99);
+}
+catch(Exception e)
+{
+System.out.println(e);
+}
+}
+}
+}
+/*
+<applet code="p4" width="800" height="600">
+</applet>
+*/
