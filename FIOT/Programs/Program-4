@@ -1,0 +1,6 @@
+'''Write a python program that accepts two numbers in A and B interchange value of A and B variable.'''
+A = int(input("Enter A : "))
+B = int(input("Enter B : "))
+A,B = B,A 
+print("Value of A :",A,"\nValue of B",B)
+
