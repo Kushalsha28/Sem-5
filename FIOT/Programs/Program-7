@@ -1,0 +1,26 @@
+#Write a python program that reads the marks for five subjects of a student. Calculate and  print the grade for the student [i.e. Grade A,B,C,D and F] using elif ladder.
+MC=int(input("Enter marks of MC : "))
+AJP=int(input("Enter marks of AJP : "))
+FIOT=int(input("Enter marks of FIOT : "))
+AWT=int(input("Enter marks of AWT : "))
+ADBMS=int(input("Enter marks of ADBMS : "))
+
+total_marks=MC+AJP+FIOT+AWT+ADBMS
+percentage=total_marks/5
+if percentage>=90 and percentage<=100:
+    grade="A+"
+elif percentage>=80 :
+    grade="A"
+elif percentage>=70:
+    grade="B"    
+elif percentage>=60:
+    grade="C"    
+elif percentage>=50:
+    grade="D"
+elif percentage>=35:
+    grade="E"
+else :
+    grade="F"
+print("Your total marks is :",total_marks)
+print("Percentage is :",percentage)
+print("Your grade is :",grade)
