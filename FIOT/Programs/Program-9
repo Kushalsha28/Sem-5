@@ -1,0 +1,13 @@
+''' Write a python program to print the Fibonacci Series [i.e 1,1,2,3,5,8,13…N terms].'''
+n = int(input("Enter Number : "))
+n1 = 0
+n2 = 1
+n3 = 0
+
+print("Fibonacci series = ",n1,n2,end=" ")
+for i in range(2, n+1):
+       
+       n3 = n1 + n2
+       n1 = n2
+       n2 = n3
+       print(n3,end=" ")
