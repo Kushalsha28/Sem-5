@@ -1,0 +1,43 @@
+/*Develop an applet that uses the mouse listener, which overrides only 
+two methods which are mousePressed and mouseReleased */
+
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+public class prac7 extends Applet implements MouseListener
+{
+String msg=" ";
+public void init()
+{
+setSize(500, 500);
+addMouseListener(this);
+}
+public void paint(Graphics g)
+{
+g.drawString(msg, 200, 250);
+showStatus(msg);
+}
+@Override
+public void mousePressed(MouseEvent M)
+{
+msg="Mouse Pressed";
+repaint();
+}
+@Override
+public void mouseReleased(MouseEvent M)
+{ msg="Mouse Realeased";
+repaint();
+}
+public void mouseClicked(MouseEvent e) {
+// TODO Auto-generated method stub
+}
+public void mouseEntered(MouseEvent e) {
+// TODO Auto-generated method stub
+}
+public void mouseExited(MouseEvent e) {
+// TODO Auto-generated method stub
+}
+}
+/*
+<applet code="prac7.java" width="500" height="500"></applet>
+*/
