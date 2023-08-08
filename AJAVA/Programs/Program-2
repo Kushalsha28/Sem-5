@@ -1,0 +1,23 @@
+/*Write applet program that draws a circle. The dimension of the applet should be 500 x 300 pixels. The circle should be centered in
+the applet and have a radius of 100 pixels. Display your name centered in a circle.( using drawOval()method)*/
+
+import java.applet.*;
+import java.awt.*;
+
+public class prac2 extends Applet {
+	public void init(){
+		setBackground(Color.black);
+		setForeground(Color.blue);
+	}
+	public void paint(Graphics k){
+		k.drawOval(150, 50, 200, 200);
+		k.fillOval(150, 50, 200, 200);
+		k.setColor(Color.white);
+		k.drawString("Kushal",230,150);
+	}
+}
+
+/*
+	<applet code="prac2" width=500 height="300">
+	</applet>
+*/
