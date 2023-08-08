@@ -1,0 +1,6 @@
+'''Write a python program to calculate simple interest.'''
+P = int(input("Enter Amount : "));
+R = float(input("Enter Rate of Interest : "));
+T = float(input("Enter Time : "));
+SI = (P*R*T)/100;
+print("Simple Interest",SI);
