@@ -1,0 +1,26 @@
+/*Draw ten red circles in a vertical column in the center of the applet*/
+import java.applet.*;
+import java.awt.*;
+
+public class pro3 extends Applet {
+	public void init() {
+		setForeground(Color.red);
+	}
+	public void paint(Graphics k){
+		k.fillOval(500, 0,   50, 50);
+		k.fillOval(500, 50,  50, 50);
+		k.fillOval(500, 100, 50, 50);
+		k.fillOval(500, 150, 50, 50);
+		k.fillOval(500, 200, 50, 50);
+		k.fillOval(500, 250, 50, 50);
+		k.fillOval(500, 300, 50, 50);
+		k.fillOval(500, 350, 50, 50);
+		k.fillOval(500, 400, 50, 50);
+		k.fillOval(500, 450, 50, 50);
+	}
+}
+
+/*
+	<applet code="pro3" width="1050" height="1080">
+	</applet>
+*/
