@@ -1,0 +1,56 @@
+/*Write an program that contains three check boxes and 30 x 30 pixel canvas.The three checkboxes should be labeled “Red”,“Green”,”Blue”. The selection of the check boxes determine the color of the canvas. For example, if
+the user selects both “Red” and “Blue”, the canvas should be purple.*/
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class p9 implements ItemListener{
+JFrame f1;
+Checkbox c1,c2,c3;
+Canvas c;
+int red = 0, green = 0, blue = 0;
+p9(){
+f1 = new JFrame("Kushal Sharma");
+c1 = new Checkbox("Red");
+c2 = new Checkbox("Green");
+c3 = new Checkbox("Blue");
+c = new Canvas();
+f1.setSize(500,500);
+c.setSize(30,30);
+c.setBackground(Color.black);
+f1.setVisible(true);
+f1.setLayout(new FlowLayout());
+f1.add(c);
+f1.add(c1);
+f1.add(c2);
+f1.add(c3);
+c1.addItemListener(this);
+c2.addItemListener(this);
+c3.addItemListener(this);
+}
+public static void main(String[] args){
+p9 obj = new p9();
+}
+public void itemStateChanged(ItemEvent a){
+if(c1.getState()){
+red = 255;
+}
+else{
+red = 0;
+}
+if(c2.getState()){
+green = 255;
+}
+else{
+green = 0;
+}
+if(c3.getState()){
+blue = 255;
+}
+else{
+blue = 0;
+}
+Color clr = new Color(red,green,blue);
+c.setBackground(clr);
+}
+}
