@@ -1,0 +1,5 @@
+'''Write a Python program which accepts the radius of a circle from the user and compute the area.'''
+import math as M
+Radius = float(input("Enter Radius : "))
+Area = M.pi * Radius * Radius;
+print("Area Of Circle :",Area)
