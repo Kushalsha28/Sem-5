@@ -1,0 +1,36 @@
+/* Develop an applet that contains one button. Initialize the label on the 
+button to “start”, when the user presses the button, which changes 
+the label between these two values each time the button is pressed. */
+
+import java.applet.*;
+import java.awt.*;
+import java.awt.event.*;
+public class prac6 extends Applet implements ActionListener
+{
+Button b;
+public void init()
+{
+setSize(500, 500);
+b=new Button("Start");
+b.setBackground(Color.green);
+add(b);
+b.addActionListener(this);
+}
+public void actionPerformed(ActionEvent e)
+{
+String str=b.getActionCommand();
+if(str=="Start")
+{
+b.setLabel("Stop");
+b.setBackground(Color.red);
+}
+else
+{
+b.setLabel("Start");
+b.setBackground(Color.green);
+}
+}
+}
+/*
+<applet code="prac6.java" width="500" height="300"></applet>
+*/
